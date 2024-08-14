@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to APIs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        .code-snippet {
+            background-color: #f4f4f4;
+            border-left: 4px solid #0073e6;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .imge-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Understanding APIs</h1>
+</header>
+
+<div class="container">
+    <section class="section">
+        <h2>What is an API?</h2>
+        <p>An API, or Application Programming Interface, is a set of rules that allows different software applications to communicate with each other. It acts as a bridge between different systems, enabling them to exchange data and perform tasks without requiring direct access to each other's code.</p>
+    </section>
+
+    <section class="section">
+        <h2>Key Points</h2>
+        <ul>
+            <li>APIs allow different applications to work together.</li>
+            <li>They can be used to access data or perform operations between systems.</li>
+            <li>APIs are crucial in modern digital systems, enabling automation and integration across platforms.</li>
+            <li>Security and proper documentation are critical when working with APIs.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Key Notes to Know</h2>
+        <ul>
+
+            <li><a href="rest_vs_soap.html"><strong>REST vs. SOAP</strong></a> These are two common types of APIs. REST (Representational State Transfer) is more flexible and widely used, while SOAP (Simple Object Access Protocol) is more standardized and often used in enterprise environments.</li>
+            <li><a href="api_authentication.html"><strong>API Authentication:</strong></a> APIs often require authentication methods like API keys, OAuth, or tokens to ensure secure communication.</li>
+            <li><a href="rate_limiting.html"><strong>Rate Limiting:</strong></a> APIs often impose limits on the number of requests you can make in a given time period to prevent abuse.</li>
+            <li><a href="error_handling.html"><strong>Error Handling:</strong></a> Properly handle errors and responses when working with APIs to ensure your application can handle unexpected situations gracefully.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Visualizing How an API Works</h2>
+        <div class="image-container">
+            <img src="api.jpg" alt="How an API Works">
+        </div>
+        <p>The image above illustrates the basic flow of how an API works, acting as an intermediary between the client application and the server.</p>
+    </section>
+
+    <section class="section">
+        <h2>Hands-On Knowledge: Real-Time Example with Digital Automation</h2>
+        <p>Let's consider a real-time example where a company uses digital automation to streamline their operations. Imagine a scenario where a company wants to automate its employee onboarding process. This involves multiple systems: HR management, payroll, IT setup, and employee training platforms.</p>
+        
+        <p>By using APIs, these systems can communicate and automate the entire process:</p>
+        
+        <ul>
+            <li>When a new employee is hired, the HR system sends a request to the payroll system via an API to create a new payroll account.</li>
+            <li>Simultaneously, the IT system receives a request to set up the employee's email, access rights, and necessary software.</li>
+            <li>The employee training system is also notified via an API to enroll the new employee in mandatory training courses.</li>
+        </ul>
+
+        <p>This automation reduces manual work, minimizes errors, and speeds up the onboarding process. Here’s a simple code snippet that might represent such an API call in a Python-like pseudocode:</p>
+
+        <div class="code-snippet">
+            <pre>
+import requests
+
+# API Endpoint for creating a payroll account
+url = "https://api.company.com/payroll/create_account"
+payload = {
+    "employee_id": "12345",
+    "name": "John Doe",
+    "start_date": "2024-08-14",
+    "salary": 50000
+}
+
+# Sending a POST request to the payroll API
+response = requests.post(url, json=payload)
+
+# Check if the request was successful
+if response.status_code == 201:
+    print("Payroll account created successfully!")
+else:
+    print(f"Failed to create payroll account: {response.status_code}")
+            </pre>
+        </div>
+
+        <p>This code sends a request to the payroll system's API to create a new payroll account for the employee. The response from the API indicates whether the account was created successfully.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 CK's API Tutorial</p>
+</footer>
+
+</body>
+</html>

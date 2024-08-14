@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Limiting - API Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0073e6;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .code-snippet {
+            background-color: #f4f4f4;
+            border-left: 4px solid #0073e6;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Rate Limiting</h1>
+    <section class="section">
+        <p><strong>Rate Limiting</strong> is a technique used by APIs to control the number of requests a client can make in a given time period. This helps prevent abuse and ensures fair usage of the API.</p>
+        <p><strong>Example:</strong> An API might allow a maximum of 100 requests per minute. If a client exceeds this limit, the API might return a "429 Too Many Requests" error, asking the client to slow down.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 CK's API Tutorial</p>
+</footer>
+
+</body>
+</html>

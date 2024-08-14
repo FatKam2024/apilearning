@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST vs. SOAP - API Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0073e6;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .code-snippet {
+            background-color: #f4f4f4;
+            border-left: 4px solid #0073e6;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0073e6;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>REST vs. SOAP</h1>
+    <section class="section">
+        <p><strong>REST (Representational State Transfer)</strong> is a flexible, lightweight API standard commonly used in modern web services. It uses standard HTTP methods like GET, POST, PUT, and DELETE to perform operations. REST is stateless, meaning each request from a client contains all the information needed to process the request.</p>
+        <p><strong>Example:</strong> A weather app might use a REST API to fetch current weather data by sending a GET request to an endpoint like <code>https://api.weather.com/current?location=NewYork</code>.</p>
+    </section>
+
+    <section class="section">
+        <p><strong>SOAP (Simple Object Access Protocol)</strong> is a more rigid, standardized protocol often used in enterprise environments. SOAP messages are XML-based and can include security features like WS-Security. SOAP is stateful, meaning it can maintain the state between multiple operations.</p>
+        <p><strong>Example:</strong> A bank's payment processing system might use a SOAP API to ensure secure and reliable transactions across different services.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 CK's API Tutorial</p>
+</footer>
+
+</body>
+</html>
